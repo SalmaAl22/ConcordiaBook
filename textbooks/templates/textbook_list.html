@@ -18,10 +18,12 @@
 <body>
     <div class="content"> 
         <div class="textbook-list">
-            <h2>Available Textbooks for {{ course_code }}</h2>
+           
             {% if no_results %}
+            <h2>Available Textbooks for {{ temp_course_code }}</h2>
                 <p><strong>{{ message }}</strong></p>
                     {% else %}
+                    <h2>Available Textbooks for {{ course_code }}</h2>
                         <ul>
                             {% for textbook in textbooks %}
                                 <li>

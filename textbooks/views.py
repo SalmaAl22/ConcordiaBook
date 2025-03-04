@@ -21,6 +21,6 @@ def textbook_list(request, course_code):
         return render(request, 'textbook_list.html', {'textbooks': textbooks, 'course_code': course_code, 'no_results': False})
     else:
         # use a temporary course code If no textbooks are found and show a no results message
-        temp_course_code = 'TEMP_COURSE'  # Temporary course code to display a message that no book is found for the course code provided
-        message = f"No textbooks are currently available for {course_code}. Try another course or check back later."
-        return render(request, 'textbook_list.html', {'course_code': course_code, 'no_results': True, 'message': message, 'temp_course_code': temp_course_code})
+        temp_course_code = course_code  # Temporary course code to display a message that no book is found for the course code provided
+        message = f"No textbooks are currently available for {temp_course_code }. Try another course or check back later."
+        return render(request, 'textbook_list.html', { 'no_results': True, 'message': message, 'temp_course_code': temp_course_code})
