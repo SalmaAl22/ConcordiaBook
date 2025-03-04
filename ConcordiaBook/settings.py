@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'My_Midterm.urls'
+ROOT_URLCONF = 'ConcordiaBook.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'My_Midterm.wsgi.application'
+WSGI_APPLICATION = 'ConcordiaBook.wsgi.application'
 
 
 # Database
