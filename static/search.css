@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('/static/images/backgroundpic.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+}
+
+
+header {
+    display: flex; 
+    justify-content: left; 
+    align-items: center; 
+    background-color: #F1F5F9; 
+    padding: 10px 20px; 
+    height: 80px; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 10; 
+}
+
+header .header-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px; 
+    height: 100%;
+}
+
+header .header-container img {
+    height: 60px; 
+    width: auto; 
+}
+
+/* Title in header */
+header h1 {
+    font-size: 28px;
+    color: #7d193b;
+    font-weight: bold;
+}
+
+
+.content {
+    margin-top: 100px; 
+}
+
+
+.search-form, .textbook-list {
+    background-color: white; 
+    padding: 20px;  
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    margin: 30px auto; 
+}
+
+
+.search-form h2 {
+    font-size: 24px;
+    color: #63182f; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.search-form button {
+    padding: 10px 15px;
+    background-color: #63182f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.search-form button:hover {
+    background-color: #5b1f33;
+}
+
+
+
+.textbook-card {
+    background-color: white;
+    padding: 35px; 
+    margin-bottom: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 900px; 
+    margin: 20px auto; 
+}
+
+
+.textbook-card h3,
+.textbook-card p {
+    margin: 10px 0; 
+    font-family: 'Georgia', serif;
+}
+
+
+h1 {
+    font-family: 'Georgia', serif; 
+    font-size: 24px;
+    color: #7d193b;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #F1F5F9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+h1:hover {
+    color: #7b3047;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, color 0.3s ease;
+}

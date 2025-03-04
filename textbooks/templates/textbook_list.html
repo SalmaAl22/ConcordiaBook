@@ -1,0 +1,39 @@
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConcordiaBook </title>
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+</head>
+<header>
+    <div class="header-container">
+        <img src="{% static 'images/Concordia-logo.jpeg' %}" alt="Concordia Logo" class="logo">
+
+        <h1>ConcordiaBook </h1>
+    </div>
+</header>
+
+
+<body>
+    <div class="content"> 
+        <div class="textbook-list">
+            <h2>Available Textbooks for {{ course_code }}</h2>
+            {% if no_results %}
+                <p><strong>{{ message }}</strong></p>
+                    {% else %}
+                        <ul>
+                            {% for textbook in textbooks %}
+                                <li>
+                                    <strong>{{ textbook.title }}</strong><br>
+                                    Author: {{ textbook.author }}<br>
+                                    Edition: {{ textbook.edition }}<br>
+                                    Condition: {{ textbook.condition }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                {% endif %}
+        </div>
+    </div>
+</body>
+

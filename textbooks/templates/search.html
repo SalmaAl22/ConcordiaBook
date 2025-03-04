@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConcordiaBook </title>
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{% static 'images/concordia-logo.jpeg' %}" alt="Concordia Logo">
+            <h1>ConcordiaBook</h1>
+        </div>
+    </header>
+
+    <div class="content"> 
+        <div class="search-form">
+            <h2>Search for Textbooks</h2>
+            <form method="POST" action="{% url 'search' %}">
+                {% csrf_token %}
+                <label for="course_code">Enter Course Code:</label>
+                <input type="text" id="course_code" name="course_code" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
